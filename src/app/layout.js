@@ -1,8 +1,10 @@
 "use client";
 import React from 'react'
-import { Providers } from './providers'
-import './globals.css'
 import { Inter } from 'next/font/google'
+import { CacheProvider } from "@chakra-ui/next-js";
+import { ChakraProvider } from '@chakra-ui/react';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,8 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body>
+        <CacheProvider>
+          <ChakraProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ChakraProvider>
+        </CacheProvider>
       </body>
     </html>
   );
