@@ -60,14 +60,7 @@ const Footer = () => {
                 </Heading>
               </Box>
               <Box marginBottom="152px" marginTop="159px" mr="90px">
-                <Buttons
-                  color={undefined}
-                  background={undefined}
-                  btnText="Join our Community"
-                  marginBottom={undefined}
-                  marginTop={undefined}
-                  width={undefined}
-                />
+                <Buttons btnText="Join our Community" />
               </Box>
             </Flex>
             <Box

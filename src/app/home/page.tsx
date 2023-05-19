@@ -70,9 +70,6 @@ const Home = () => {
             btnText="Join our Community"
             background="#E05D2F"
             color="#fff"
-            marginBottom={undefined}
-            marginTop={"50px"}
-            width={undefined}
           />
         </Box>
       </Box>
@@ -115,14 +112,7 @@ const Home = () => {
             among tech enthusiasts of all levels. Whether you're a beginner or
             an expert, our community welcomes you.
           </Text>
-          <Buttons
-            color={undefined}
-            marginTop={undefined}
-            marginBottom={undefined}
-            background={undefined}
-            btnText="Know More"
-            width={undefined}
-          />
+          <Buttons btnText="Know More" />
         </Box>
         <Box pt="51px">
           <Image src={About} alt="" />
