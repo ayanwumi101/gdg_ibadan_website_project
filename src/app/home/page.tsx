@@ -68,7 +68,6 @@ const Home = () => {
           </Text>
           <Buttons
             btnText="Join our Community"
-            handleClick={onclick}
             background="#E05D2F"
             color="#fff"
             marginBottom={undefined}

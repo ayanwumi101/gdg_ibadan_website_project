@@ -141,14 +141,7 @@ const Organisers = () => {
             </Box>
           </Box>
         </Flex>
-        <Buttons
-          color={undefined}
-          marginBottom="76px"
-          marginTop="55px"
-          background={undefined}
-          btnText="Know More"
-          width={undefined}
-        />
+        <Buttons btnText="Know More" />
       </Box>
     </>
   );

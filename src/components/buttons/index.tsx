@@ -1,8 +1,17 @@
 "use state";
 import { Box } from "@chakra-ui/react";
-import PropTypes from "prop-types";
+import { FC } from "react";
 
-export default function Buttons({
+interface iButtonProps {
+  btnText: string;
+  handleClick?: () => void;
+  background?: string;
+  color?: string;
+  marginTop?: string;
+  marginBottom?: string;
+  width?: string;
+}
+const Buttons: FC<iButtonProps> = ({
   btnText,
   handleClick,
   background,
@@ -10,7 +19,7 @@ export default function Buttons({
   marginTop,
   marginBottom,
   width,
-}) {
+}) => {
   return (
     <>
       <Box
@@ -34,9 +43,6 @@ export default function Buttons({
       </Box>
     </>
   );
-}
-
-Buttons.propTypes = {
-  btnText: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
 };
+
+export default Buttons;

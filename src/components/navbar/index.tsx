@@ -73,15 +73,7 @@ const Navbar = () => {
         </Box>
       </Box>
 
-      <Buttons
-        btnText="Register"
-        handleClick={onclick}
-        background="#E05D2F"
-        color="#fff"
-        marginTop={undefined}
-        marginBottom={undefined}
-        width={undefined}
-      />
+      <Buttons btnText="Register" background="#E05D2F" color="#fff" />
     </Flex>
   );
 };
