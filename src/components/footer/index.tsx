@@ -75,23 +75,23 @@ const Footer = () => {
               inset="2rem auto auto 2rem"
               backgroundColor="#E05D2F"
               borderRadius="15px"
-              width="9.17px"
-              height="10px"
+              width="9px"
+              height="9px"
             ></Box>
             <Box
               position="absolute"
               inset="2rem auto auto 13rem"
               backgroundColor="#34A853"
               borderRadius="15px"
-              width="9.17px"
-              height="10px"
+              width="9px"
+              height="9px"
             ></Box>
             <Box
               position="absolute"
               inset="6rem 28rem auto auto"
               backgroundColor="#E05D2F"
               borderRadius="15px"
-              width="8.48px"
+              width="8px"
               height="8px"
             ></Box>
             <Box
@@ -99,40 +99,40 @@ const Footer = () => {
               inset="auto auto 4rem 10rem"
               backgroundColor="#FBBC04"
               borderRadius="15px"
-              width="11.02px"
-              height="10.04px"
+              width="11px"
+              height="11px"
             ></Box>
             <Box
               position="absolute"
               inset="auto auto 6rem 20rem"
               backgroundColor="#4285F4"
               borderRadius="15px"
-              width="11.02px"
-              height="10.04px"
+              width="11px"
+              height="11px"
             ></Box>
             <Box
               position="absolute"
               inset="auto auto 7rem 25rem"
               backgroundColor="#8F8F8F"
               borderRadius="15px"
-              width="9.17px"
-              height="10px"
+              width="9px"
+              height="9px"
             ></Box>
             <Box
               position="absolute"
               inset="auto auto 6.5em 30rem"
               backgroundColor="#4285F4"
               borderRadius="15px"
-              width="11.02px"
-              height="10.04px"
+              width="11px"
+              height="11px"
             ></Box>
             <Box
               position="absolute"
               inset="auto auto 10rem 35rem"
               backgroundColor="#34A853"
               borderRadius="15px"
-              width="11.02px"
-              height="10.04px"
+              width="11px"
+              height="11px"
             ></Box>
           </Box>
 
@@ -158,7 +158,7 @@ const Footer = () => {
                 learning among tech enthusiasts of all levels. Whether you're a
                 beginner or an expert, our community welcomes you.
               </Text>
-              <Flex paddingTop="56px" columnGap="25px">
+              <Flex paddingTop="56px" columnGap="25px" cursor="pointer">
                 <Icon as={SlackIcon}></Icon>
                 <Icon as={LinkedinIcon}></Icon>
                 <Icon as={TwitterIcon}></Icon>
@@ -175,7 +175,12 @@ const Footer = () => {
               >
                 Quick Links
               </Text>
-              <UnorderedList fontSize="16px" fontWeight="400" lineHeight="24px">
+              <UnorderedList
+                fontSize="16px"
+                fontWeight="400"
+                lineHeight="24px"
+                cursor="pointer"
+              >
                 <ListItem pb="24px">About GDG Ibadan</ListItem>
                 <ListItem pb="24px">Upcoming Events</ListItem>
                 <ListItem pb="24px">Blog</ListItem>
@@ -197,6 +202,7 @@ const Footer = () => {
                 fontWeight="400"
                 lineHeight="24px"
                 pt="24px"
+                cursor="pointer"
               >
                 <ListItem>Terms/Privacy</ListItem>
               </UnorderedList>

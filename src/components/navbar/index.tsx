@@ -42,6 +42,7 @@ const Navbar = () => {
         lineHeight="24px"
         font-weight="lighter"
         listStyleType="none"
+        cursor="pointer"
       >
         <Menu>
           <MenuButton

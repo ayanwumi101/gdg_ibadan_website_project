@@ -192,6 +192,7 @@ const Home = () => {
           columnGap="20px"
           position="relative"
           bottom="5rem"
+          cursor="pointer"
         >
           <Cards
             hText={"Access"}
