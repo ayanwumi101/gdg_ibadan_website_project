@@ -60,6 +60,7 @@ const Footer = () => {
                   Ready to take your tech skills to the next level? Join our
                   community now!
                 </Heading>
+                e{" "}
               </Box>
               <Box
                 marginBottom={{ base: "66px", lg: "152px" }}

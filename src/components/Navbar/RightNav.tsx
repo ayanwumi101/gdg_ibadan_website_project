@@ -6,6 +6,7 @@ import {
   MenuList,
   Button,
   MenuItem,
+  Link,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import React from "react";
@@ -73,12 +74,15 @@ const RightNav = ({ open, onClick }: RightNavProps) => {
               fontWeight="500"
               _hover={{ backgroundColor: "white", color: "black" }}
             >
-              <MenuItem icon={<AboutIcon />}>About GDG Ibadan</MenuItem>
+              <MenuItem as={Link} href="/about" icon={<AboutIcon />}>
+                About GDG Ibadan
+              </MenuItem>
               <MenuItem icon={<JobBoardIcon />}>Job Board</MenuItem>
             </MenuList>
           </Menu>
           <Box
-            as="li"
+            as={Link}
+            href="/event"
             ml={{ base: "0px", lg: "24px" }}
             mt={{ base: "24px", lg: "0px" }}
             mb={{ base: "24px", lg: "0px" }}

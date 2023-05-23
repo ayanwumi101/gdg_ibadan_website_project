@@ -1,28 +1,4 @@
 "use client";
-// import {
-//     Box
-// } from "@chakra-ui/react";
-// import React, { useState } from 'react';
-// import RightNav from './RightNav';
-// import BDiv from '../../components/div';
-
-// const Burger = () => {
-//     const [open, setOpen] = useState(false)
-
-//     return (
-//         <>
-//             <Box open={open} onClick={() => setOpen(!open)} width="2rem" height="2rem" position="absolute" top="14px" right="20px" display={{ md: "flex", lg: "none" }} zIndex="20" justifyContent={{ md: "space-around" }} flexFlow={{ md: "column nowrap" }}>
-//                 <BDiv />
-//                 <BDiv />
-//                 <BDiv />
-//             </Box>
-//             <RightNav open={open} />
-//         </>
-//     )
-// }
-
-// export default Burger;
-
 import { Box } from "@chakra-ui/react";
 import { useState } from "react";
 import RightNav from "./RightNav";

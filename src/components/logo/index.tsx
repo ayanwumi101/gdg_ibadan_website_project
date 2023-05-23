@@ -7,7 +7,7 @@ import GDGLogo from "../../assets/GDG-logo.png";
 const Logo = () => {
   return (
     <>
-      <Flex columnGap="8.03px">
+      <Flex columnGap="8.03px" alignItems="center">
         <Image
           src={GDGLogo}
           alt=""

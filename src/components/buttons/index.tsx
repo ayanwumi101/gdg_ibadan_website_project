@@ -10,6 +10,11 @@ interface iButtonProps {
   marginTop?: string;
   marginBottom?: string;
   width?: string;
+  height?: string;
+  fontSize?: string;
+  lineHeight?: string;
+  fontWeight?: string;
+  padding?: string;
 }
 const Buttons: FC<iButtonProps> = ({
   btnText,
@@ -19,6 +24,11 @@ const Buttons: FC<iButtonProps> = ({
   marginTop,
   marginBottom,
   width,
+  height,
+  fontSize,
+  lineHeight,
+  fontWeight,
+  padding,
 }) => {
   return (
     <>
@@ -32,6 +42,11 @@ const Buttons: FC<iButtonProps> = ({
           marginTop: marginTop,
           marginBottom: marginBottom,
           width: width,
+          height: height,
+          fontSize: fontSize,
+          lineHeight: lineHeight,
+          fontWeight: fontWeight,
+          padding: padding,
         }}
         as="button"
         borderRadius="md"
