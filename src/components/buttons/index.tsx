@@ -1,4 +1,4 @@
-"use state";
+"use client";
 import { Box } from "@chakra-ui/react";
 import { FC } from "react";
 
@@ -37,7 +37,8 @@ const Buttons: FC<iButtonProps> = ({
         borderRadius="md"
         p="13px 32px 13px 32px"
         fontSize="16px"
-        fontWeight="700"
+        fontWeight="500"
+        lineHeight="20px"
       >
         {btnText}
       </Box>

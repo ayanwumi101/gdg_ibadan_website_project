@@ -4,7 +4,6 @@ import Navbar from "../../components/navbar";
 import {
   Box,
   Center,
-  Container,
   Flex,
   Heading,
   ListItem,
@@ -23,9 +22,9 @@ import Heyfood from "../../assets/heyfood.png";
 import Halal from "../../assets/halal.png";
 import Line from "../../assets/line.png";
 import Cards from "../../components/cards";
-import BgLine from "../../assets/bg-line.jpg";
 import Organisers from "../../components/organisers";
 import Footer from "../../components/footer";
+import HCardify from "../../assets/image 3.png";
 
 const Home = () => {
   return (
@@ -34,12 +33,19 @@ const Home = () => {
       <Box
         maxW="100%"
         height="auto"
-        mt="9rem"
-        ml="50"
-        mr="50"
+        mt={{ base: "5.1rem", lg: "4.5rem" }}
+        ml={{ base: "20px", lg: "50px" }}
+        mr={{ base: "20px", lg: "50px" }}
         position="relative"
       >
-        <Image src={Header} alt={""} style={{ borderRadius: "24px" }} />
+        <Box height={{ base: "732px", lg: "auto" }}>
+          <Image
+            src={Header}
+            alt={""}
+            style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }}
+          />
+        </Box>
+
         <Box
           position="absolute"
           top="0rem"
@@ -47,18 +53,20 @@ const Home = () => {
           //   backgroundColor="rgb(0, 0, 0)"
           background="rgba(0, 0, 0, 0.5)"
           width="100%"
-          pb="14.38rem"
-          pt="7rem"
+          pb={{ base: "0rem", lg: "14.5rem" }}
+          pt={{ base: "0rem", lg: "10rem" }}
           borderRadius="24px"
+          height={{ base: "100%" }}
         >
           <Text
-            pt="94px"
-            pl="163px"
-            fontSize="42px"
-            pr="164px"
+            pt={{ base: "95px", lg: "94px" }}
+            pl={{ base: "49px", lg: "163px" }}
+            fontSize={{ base: "32px", lg: "42px" }}
+            pr={{ base: "42px", lg: "164px" }}
             fontWeight="light"
-            lineHeight="80px"
+            lineHeight={{ base: "60px", lg: "80px" }}
             color="#fff"
+            paddingBottom={{ base: "56px" }}
           >
             Welcome to{" "}
             <Text as="span" color="#E05D2F">
@@ -74,13 +82,22 @@ const Home = () => {
         </Box>
       </Box>
 
-      <Flex columnGap="51px" pl="120px" pr="132px">
-        <Box pt="181px">
+      <Flex
+        columnGap="51px"
+        pl={{ base: "0px", lg: "120px" }}
+        pr={{ base: "0px", lg: "132px" }}
+        display={{ base: "block", lg: "flex" }}
+      >
+        <Box
+          pt={{ base: "105px", lg: "181px" }}
+          pl={{ base: "22px" }}
+          pr={{ base: "52px" }}
+        >
           <Heading
             color="#1E3747"
             fontWeight="500"
-            fontSize="45px"
-            lineHeight="57px"
+            fontSize={{ base: "32px", lg: "45px" }}
+            lineHeight={{ base: "40px", lg: "57px" }}
             pb="38px"
             // fontFamily="Recoleta, sans-serif"
           >
@@ -89,7 +106,7 @@ const Home = () => {
           <UnorderedList
             fontSize="16px"
             fontWeight="500"
-            lineHeight="24px"
+            lineHeight="20px"
             columnGap="37px"
             display="flex"
           >
@@ -104,7 +121,7 @@ const Home = () => {
             fontWeight="400"
             lineHeight="28px"
             pb="44px"
-            width="367px"
+            width={{ base: "302px", lg: "367px" }}
             as="p"
             // fontFamily="Google Sans Display, sans-serif"
           >
@@ -112,15 +129,22 @@ const Home = () => {
             among tech enthusiasts of all levels. Whether you're a beginner or
             an expert, our community welcomes you.
           </Text>
-          <Buttons btnText="Know More" />
+          <Buttons
+            btnText="Know More"
+            // marginBottom={{ base: "84px" }}
+          />
         </Box>
-        <Box pt="51px">
+        <Box pt={{ base: "84px", lg: "51px" }} pb={{ base: "61px" }}>
           <Image src={About} alt="" />
         </Box>
       </Flex>
 
-      <Box pt="134px">
-        <Center fontSize="45px" fontWeight="500" lineHeight="57px">
+      <Box pt={{ base: "27px", lg: "134px" }}>
+        <Center
+          fontSize={{ base: "32px", lg: "45px" }}
+          fontWeight="500"
+          lineHeight={{ base: "40px", lg: "57px" }}
+        >
           Our Sponsors
         </Center>
         <Flex
@@ -131,6 +155,7 @@ const Home = () => {
           pr="220px"
           pt="67px"
           pb="66px"
+          display={{ base: "none", lg: "flex" }}
         >
           <Image src={Lacasera} alt={""} />
           <Image src={Cardify} alt={""} />
@@ -139,18 +164,35 @@ const Home = () => {
           <Image src={Heyfood} alt={""} />
           <Image src={Halal} alt={""} />
         </Flex>
+        <Box
+          display={{ base: "flex", lg: "none" }}
+          pl="0px"
+          pr="30px"
+          pt="32px"
+          pb="85px"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Image src={HCardify} alt={""} />
+          <Image src={Ship} alt={""} />
+          <Image src={Altschool} alt={""} />
+        </Box>
       </Box>
 
       <Box
         bgColor="#1E3747"
-        ml="118px"
-        mr="133px"
+        ml={{ base: "19px", lg: "118px" }}
+        mr={{ base: "19px", lg: "133px" }}
         borderRadius="24px"
         color="#fff"
         overflow="hidden"
         position="relative"
+        height={{ base: "105rem", lg: "41rem" }}
       >
-        <Image src={Line} alt={""} />
+        <Box pt={{ base: "4rem" }}>
+          <Image src={Line} alt={""} />
+        </Box>
+
         <Box
           textAlign="center"
           position="absolute"
@@ -158,17 +200,21 @@ const Home = () => {
           right="0"
           left="0"
         >
-          <Heading fontSize="45px" lineHeight="57px" fontWeight="500">
+          <Heading
+            fontSize={{ base: "32px", lg: "45px" }}
+            lineHeight={{ base: "40px", lg: "57px" }}
+            fontWeight="500"
+          >
             Features
           </Heading>
           <Box
-            fontSize="22px"
-            lineHeight="28px"
+            fontSize={{ base: "18px", lg: "22px" }}
+            lineHeight={{ base: "27px", lg: "28px" }}
             fontWeight="400"
-            pt="27px"
-            ml="313px"
+            pt={{ base: "63px", lg: "27px" }}
+            ml={{ base: "18.97px", lg: "313px" }}
             // width="563px"
-            mr="313px"
+            mr={{ base: "18.97px", lg: "313px" }}
             fontFamily="'Google Sans Display', sans-serif"
           >
             Fostering collaboration and learning among tech of all enthusiasts
@@ -176,12 +222,14 @@ const Home = () => {
           </Box>
         </Box>
         <Flex
-          pl="32px"
-          pr="33px"
+          pl={{ base: "20px", lg: "32px" }}
+          pr={{ base: "13px", lg: "33px" }}
           columnGap="20px"
           position="relative"
-          bottom="5rem"
+          bottom={{ base: "0rem", lg: "5rem" }}
           cursor="pointer"
+          top={{ base: "5rem", lg: "-5rem" }}
+          display={{ base: "block", lg: "flex" }}
         >
           <Cards
             hText={"Access"}

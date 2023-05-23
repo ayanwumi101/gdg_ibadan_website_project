@@ -1,5 +1,5 @@
-"use state";
-import { Box, Center, Flex, Heading } from "@chakra-ui/react";
+"use client";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import Lead from "../../assets/lead-img.png";
@@ -11,13 +11,17 @@ import Buttons from "../buttons";
 const Organisers = () => {
   return (
     <>
-      <Box bgColor="#E9ECED" mt="104px" textAlign="center">
+      <Box
+        bgColor="#E9ECED"
+        mt={{ base: "52px", lg: "104px" }}
+        textAlign="center"
+      >
         <Heading
           textAlign="center"
-          fontSize="45px"
-          lineHeight="57px"
+          fontSize={{ base: "32px", lg: "45px" }}
+          lineHeight={{ base: "40px", lg: "57px" }}
           fontWeight="500"
-          pt="93px"
+          pt={{ base: "61px", lg: "93px" }}
           //   fontFamily="Recoleta, sans-serif"
         >
           Let’s Meet the Organisers
@@ -25,9 +29,11 @@ const Organisers = () => {
         <Flex
           justifyContent="center"
           columnGap="40px"
-          pl="180px"
-          pr="181px"
-          pt="65px"
+          pl={{ base: "68px", lg: "180px" }}
+          pr={{ base: "67px", lg: "181px" }}
+          pt={{ base: "28px", lg: "65px" }}
+          display={{ base: "block", lg: "flex" }}
+          alignItems="baseline"
         >
           <Box>
             <Image src={Lead} alt={""} />
@@ -57,7 +63,7 @@ const Organisers = () => {
             </Box>
           </Box>
 
-          <Box>
+          <Box pt="14px">
             <Image src={CoOrganiser} alt={""} />
             <Box
             //   background="#fff"
@@ -85,7 +91,7 @@ const Organisers = () => {
             </Box>
           </Box>
 
-          <Box>
+          <Box pt="14px">
             <Image src={Organiser} alt={""} />
             <Box
             //   background="#fff"
@@ -113,7 +119,7 @@ const Organisers = () => {
             </Box>
           </Box>
 
-          <Box>
+          <Box pt="14px">
             <Image src={Secretary} alt={""} />
             <Box
             //   background="#fff"
@@ -141,7 +147,12 @@ const Organisers = () => {
             </Box>
           </Box>
         </Flex>
-        <Buttons btnText="Know More" />
+        <Box
+          paddingTop={{ base: "60px", lg: "55px" }}
+          paddingBottom={{ base: "29px", lg: "76px" }}
+        >
+          <Buttons btnText="Know More" />
+        </Box>
       </Box>
     </>
   );

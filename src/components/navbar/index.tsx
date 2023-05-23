@@ -1,20 +1,8 @@
 "use client";
-import {
-  Flex,
-  Box,
-  Menu,
-  MenuButton,
-  MenuList,
-  Button,
-  MenuItem,
-  Img,
-} from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
-import { AboutIcon, JobBoardIcon } from "../../components/icons";
-import Buttons from "../../components/buttons";
 import Logo from "../logo";
+import Burger from "./Burger";
 
 const Navbar = () => {
   return (
@@ -23,10 +11,10 @@ const Navbar = () => {
       alignItems="center"
       justifyContent="space-between"
       bg="#fff"
-      pl="128px"
-      pr="138px"
-      pt="27px"
-      pb="27px"
+      pl={{ base: "20px", lg: "128px" }}
+      pr={{ base: "22px", lg: "138px" }}
+      pt={{ base: "20px", lg: "21px" }}
+      pb={{ base: "20px", lg: "21px" }}
       position="fixed"
       top="0"
       left="0"
@@ -35,45 +23,7 @@ const Navbar = () => {
     >
       <Logo />
 
-      <Box
-        display="flex"
-        alignItems="center"
-        fontSize="16px"
-        lineHeight="24px"
-        font-weight="lighter"
-        listStyleType="none"
-        cursor="pointer"
-      >
-        <Menu>
-          <MenuButton
-            as={Button}
-            bg="white"
-            rightIcon={<ChevronDownIcon ml="-10px" />}
-            fontSize="16px"
-            fontWeight="500"
-            _hover={{ backgroundColor: "white", color: "black" }}
-            p="0"
-          >
-            GDG Ibadan
-          </MenuButton>
-          <MenuList
-            fontSize="16px"
-            fontWeight="500"
-            _hover={{ backgroundColor: "white", color: "black" }}
-          >
-            <MenuItem icon={<AboutIcon />}>About GDG Ibadan</MenuItem>
-            <MenuItem icon={<JobBoardIcon />}>Job Board</MenuItem>
-          </MenuList>
-        </Menu>
-        <Box as="li" ml="27.19">
-          Events
-        </Box>
-        <Box as="li" ml="24px">
-          Blog
-        </Box>
-      </Box>
-
-      <Buttons btnText="Register" background="#E05D2F" color="#fff" />
+      <Burger />
     </Flex>
   );
 };
