@@ -38,11 +38,14 @@ const RightNav = ({ open, onClick }: RightNavProps) => {
         height={{ base: "350px", lg: "auto" }}
         width={{ base: "250px", lg: "auto" }}
         padding={{ base: "3rem" }}
-        transition="transform 0.3s ease-in-out"
+        transition={{
+          base: "transform 0.3s ease-in-out",
+          lg: "none",
+        }}
         pt={{ lg: "10px" }}
         pr={{ lg: "8.5rem" }}
         textAlign={{ base: "center" }}
-        mt={{ base: "35px" }}
+        mt={{ base: "35px", lg: "0px" }}
       >
         <Box
           display={{ base: "block", lg: "flex" }}
@@ -77,12 +80,16 @@ const RightNav = ({ open, onClick }: RightNavProps) => {
           <Box
             as="li"
             ml={{ base: "0px", lg: "24px" }}
-            mt={{ base: "24px" }}
-            mb={{ base: "24px" }}
+            mt={{ base: "24px", lg: "0px" }}
+            mb={{ base: "24px", lg: "0px" }}
           >
             Events
           </Box>
-          <Box as="li" ml={{ base: "0px", lg: "24px" }} mb={{ base: "61px" }}>
+          <Box
+            as="li"
+            ml={{ base: "0px", lg: "24px" }}
+            mb={{ base: "61px", lg: "0px" }}
+          >
             Blog
           </Box>
         </Box>

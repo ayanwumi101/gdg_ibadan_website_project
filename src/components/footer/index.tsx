@@ -52,8 +52,8 @@ const Footer = () => {
                 pr={{ base: "18px" }}
               >
                 <Heading
-                  w={{ base: "267px", lg: "589px" }}
-                  fontSize={{ base: "32px", lg: "45px" }}
+                  w={{ base: "267px", lg: "465px" }}
+                  fontSize={{ base: "32px", lg: "40px" }}
                   lineHeight={{ base: "48px", lg: "57px" }}
                   fontWeight="500"
                 >
