@@ -5,3 +5,6 @@ export * from "./slack-icon";
 export * from "./twitter-icon";
 export * from "./download-icon";
 export * from "./love-icon";
+export * from "./whatsapp-icon";
+export * from "./facebook-icon";
+export * from "./danger-icon";

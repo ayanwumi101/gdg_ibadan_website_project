@@ -4,6 +4,7 @@ import {
   Flex,
   Heading,
   Icon,
+  Link,
   ListItem,
   Text,
   UnorderedList,
@@ -32,7 +33,7 @@ const Footer = () => {
             mr={{ base: "18px", lg: "82px" }}
             position="absolute"
             borderRadius="24px"
-            bottom={{ base: "36.5rem", lg: "25rem" }}
+            bottom={{ base: "36.5rem", lg: "24rem" }}
             left="0"
             right="0"
           >
@@ -59,8 +60,7 @@ const Footer = () => {
                 >
                   Ready to take your tech skills to the next level? Join our
                   community now!
-                </Heading>
-                e{" "}
+                </Heading>{" "}
               </Box>
               <Box
                 marginBottom={{ base: "66px", lg: "152px" }}
@@ -239,7 +239,7 @@ const Footer = () => {
               </Flex>
             </Box>
 
-            <Box pt={{ base: "39px" }}>
+            <Box pt={{ base: "39px", lg: "0px" }}>
               <Text
                 fontSize="16px"
                 fontWeight="500"
@@ -249,24 +249,32 @@ const Footer = () => {
               >
                 Quick Links
               </Text>
-              <UnorderedList
+              <Box
                 fontSize="16px"
                 fontWeight="400"
                 lineHeight="20px"
                 cursor="pointer"
+                // display="block"
               >
-                <ListItem pb={{ base: "16px", lg: "24px" }}>
-                  About GDG Ibadan
-                </ListItem>
-                <ListItem pb={{ base: "16px", lg: "24px" }}>
-                  Upcoming Events
-                </ListItem>
-                <ListItem pb={{ base: "16px", lg: "24px" }}>Blog</ListItem>
-                <ListItem pb={{ base: "16px", lg: "24px" }}>Job Board</ListItem>
-              </UnorderedList>
+                <Box as="li" pb={{ base: "16px", lg: "24px" }}>
+                  <Link href="/about">About GDG Ibadan</Link>
+                </Box>
+
+                <Box pb={{ base: "16px", lg: "24px" }} as="li">
+                  <Link href="/event">Upcoming Events</Link>
+                </Box>
+
+                <Box pb={{ base: "16px", lg: "24px" }} as="li">
+                  <Link href="/blog">Blog</Link>
+                </Box>
+
+                <Box pb={{ base: "16px", lg: "24px" }} as="li">
+                  <Link href="">Job Board</Link>
+                </Box>
+              </Box>
             </Box>
 
-            <Box pt={{ base: "15px" }}>
+            <Box pt={{ base: "15px", lg: "0px" }}>
               <Text
                 fontSize="16px"
                 fontWeight="500"
@@ -275,15 +283,17 @@ const Footer = () => {
               >
                 Legal
               </Text>
-              <UnorderedList
+              <Box
                 fontSize="16px"
                 fontWeight="400"
                 lineHeight="20px"
                 pt={{ base: "32px", lg: "24px" }}
                 cursor="pointer"
               >
-                <ListItem>Terms/Privacy</ListItem>
-              </UnorderedList>
+                <Box as="li">
+                  <Link href="">Terms/Privacy</Link>
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Box>

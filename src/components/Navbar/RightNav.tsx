@@ -37,7 +37,7 @@ const RightNav = ({ open, onClick }: RightNavProps) => {
         top="0"
         right="0"
         height={{ base: "350px", lg: "auto" }}
-        width={{ base: "250px", lg: "auto" }}
+        width={{ base: "260px", lg: "auto" }}
         padding={{ base: "3rem" }}
         transition={{
           base: "transform 0.3s ease-in-out",
@@ -81,20 +81,17 @@ const RightNav = ({ open, onClick }: RightNavProps) => {
             </MenuList>
           </Menu>
           <Box
-            as={Link}
-            href="/event"
             ml={{ base: "0px", lg: "24px" }}
             mt={{ base: "24px", lg: "0px" }}
             mb={{ base: "24px", lg: "0px" }}
           >
-            Events
+            <Link href="/event">Events</Link>
           </Box>
           <Box
-            as="li"
             ml={{ base: "0px", lg: "24px" }}
             mb={{ base: "61px", lg: "0px" }}
           >
-            Blog
+            <Link href="/blog">Blog</Link>
           </Box>
         </Box>
 

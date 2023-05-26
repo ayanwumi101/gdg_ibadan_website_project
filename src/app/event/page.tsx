@@ -88,7 +88,9 @@ const Event = () => {
               <MenuItem as={Link} href="/pastevent">
                 Past Events
               </MenuItem>
-              <MenuItem>Future Events</MenuItem>
+              <MenuItem as={Link} href="">
+                Future Events
+              </MenuItem>
             </MenuList>
           </Menu>
         </Flex>

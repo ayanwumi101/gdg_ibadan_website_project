@@ -15,6 +15,7 @@ interface iButtonProps {
   lineHeight?: string;
   fontWeight?: string;
   padding?: string;
+  icon?: JSX.Element;
 }
 const Buttons: FC<iButtonProps> = ({
   btnText,
@@ -29,6 +30,7 @@ const Buttons: FC<iButtonProps> = ({
   lineHeight,
   fontWeight,
   padding,
+  icon,
 }) => {
   return (
     <>
@@ -49,7 +51,7 @@ const Buttons: FC<iButtonProps> = ({
           padding: padding,
         }}
         as="button"
-        borderRadius="md"
+        borderRadius="12px"
         p="13px 32px 13px 32px"
         fontSize="16px"
         fontWeight="500"

@@ -15,7 +15,7 @@ import {
   MenuList,
   Text,
 } from "@chakra-ui/react";
-import EventImg from "../../assets/about (1).png";
+import EventImg from "../../assets/about (2).png";
 import Image from "next/image";
 import Group from "../../assets/Group 60.png";
 import Buttons from "../../components/buttons";
