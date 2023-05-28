@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Navbar from "../../components/navbar";
+import Navbar from "../components/navbar";
 import {
   Box,
   Flex,
@@ -10,17 +10,24 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Header from "../../assets/gdg-header.jpg";
-import Buttons from "../../components/buttons";
-import About from "../../assets/images asset.png";
-import Ship from "../../assets/ship.png";
-import Altschool from "../../assets/Altschool.png";
-import Line from "../../assets/line.png";
-import Cards from "../../components/cards";
-import Organisers from "../../components/organisers";
-import Footer from "../../components/footer";
-import HCardify from "../../assets/image 3.png";
-import Sponsors from "../../components/sponsors";
+import Header from "../assets/gdg-header.jpg";
+import carousel1 from "../assets/carousel-image-3.png";
+import carousel2 from "../assets/carousel-image-2.png";
+import Buttons from "../components/buttons";
+import About from "../assets/images asset.png";
+import Ship from "../assets/ship.png";
+import Altschool from "../assets/Altschool.png";
+import Line from "../assets/line.png";
+import Cards from "../components/cards";
+import Organisers from "../components/organisers";
+import Footer from "../components/footer";
+import HCardify from "../assets/image 3.png";
+import Sponsors from "../components/sponsors";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Home = () => {
   return (
@@ -35,15 +42,28 @@ const Home = () => {
         position="relative"
       >
         <Box height={{ base: "732px", lg: "auto" }}>
-          <Image
-            src={Header}
-            alt={""}
-            style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }}
-          />
+          <Swiper spaceBetween={30} centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            // navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+            style={{height: '100%', objectFit: 'cover', borderRadius: '24px'}}
+          >
+            <SwiperSlide><Image src={Header} alt="" style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }} /></SwiperSlide>
+            <SwiperSlide><Image src={carousel1} alt="" style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }} /></SwiperSlide>
+            <SwiperSlide><Image src={carousel2} alt="" style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }} /></SwiperSlide>
+          </Swiper>
         </Box>
 
         <Box
           position="absolute"
+          zIndex='1'
           top="0rem"
           textAlign="center"
           //   backgroundColor="rgb(0, 0, 0)"
@@ -59,8 +79,8 @@ const Home = () => {
             pl={{ base: "49px", lg: "163px" }}
             fontSize={{ base: "32px", lg: "42px" }}
             pr={{ base: "42px", lg: "164px" }}
-            fontWeight="light"
-            lineHeight={{ base: "60px", lg: "80px" }}
+            fontWeight="medium"
+            lineHeight={{ base: "60px", lg: "86px" }}
             color="#fff"
             paddingBottom={{ base: "56px" }}
           >
@@ -79,10 +99,11 @@ const Home = () => {
       </Box>
 
       <Flex
-        columnGap="51px"
-        pl={{ base: "0px", lg: "120px" }}
-        pr={{ base: "0px", lg: "132px" }}
-        display={{ base: "block", lg: "flex" }}
+        justifyContent={{base: 'center', lg: 'space-between'}}
+        alignItems='center'
+        w='90%'
+        mx='auto'
+        flexWrap='wrap'
       >
         <Box
           pt={{ base: "105px", lg: "181px" }}
@@ -95,7 +116,7 @@ const Home = () => {
             fontSize={{ base: "32px", lg: "45px" }}
             lineHeight={{ base: "40px", lg: "57px" }}
             pb="38px"
-            // fontFamily="Recoleta, sans-serif"
+          // fontFamily="Recoleta, sans-serif"
           >
             About Us
           </Heading>
@@ -115,11 +136,11 @@ const Home = () => {
             color="#6A7C88"
             fontSize="22px"
             fontWeight="400"
-            lineHeight="28px"
+            lineHeight="32px"
             pb="44px"
             width={{ base: "302px", lg: "367px" }}
             as="p"
-            // fontFamily="Google Sans Display, sans-serif"
+          // fontFamily="Google Sans Display, sans-serif"
           >
             We strive to create a space that fosters collaboration and learning
             among tech enthusiasts of all levels. Whether you're a beginner or
@@ -127,7 +148,7 @@ const Home = () => {
           </Text>
           <Buttons
             btnText="Know More"
-            // marginBottom={{ base: "84px" }}
+          // marginBottom={{ base: "84px" }}
           />
         </Box>
         <Box pt={{ base: "84px", lg: "51px" }} pb={{ base: "61px" }}>
@@ -158,9 +179,9 @@ const Home = () => {
         mr={{ base: "19px", lg: "133px" }}
         borderRadius="24px"
         color="#fff"
-        overflow="hidden"
+        // overflow="hidden"
         position="relative"
-        height={{ base: "105rem", lg: "41rem" }}
+        height={{ base: "103rem", lg: "650px" }}
       >
         <Box pt={{ base: "4rem" }}>
           <Image src={Line} alt={""} />
@@ -169,9 +190,10 @@ const Home = () => {
         <Box
           textAlign="center"
           position="absolute"
-          top="5rem"
+          top={{base: '3.5rem', lg: '5rem'}}
           right="0"
           left="0"
+          bottom='0'
         >
           <Heading
             fontSize={{ base: "32px", lg: "45px" }}
@@ -181,28 +203,34 @@ const Home = () => {
             Features
           </Heading>
           <Box
-            fontSize={{ base: "18px", lg: "22px" }}
-            lineHeight={{ base: "27px", lg: "28px" }}
+            fontSize={{ base: "22px", lg: "22px" }}
+            lineHeight={{ base: "30px", lg: "28px" }}
             fontWeight="400"
             pt={{ base: "63px", lg: "27px" }}
             ml={{ base: "18.97px", lg: "313px" }}
             // width="563px"
             mr={{ base: "18.97px", lg: "313px" }}
             fontFamily="'Google Sans Display', sans-serif"
+            mb={{base: '20px'}}
           >
             Fostering collaboration and learning among tech of all enthusiasts
             level
           </Box>
         </Box>
         <Flex
-          pl={{ base: "20px", lg: "32px" }}
-          pr={{ base: "13px", lg: "33px" }}
-          columnGap="20px"
+          // justifyContent='space-between'
+          // alignItems='center'
+          flexWrap='wrap'
+          // p='5'
+          // gap={2}
+          pl={{ base: "20px", lg: "25px" }}
+          pr={{ base: "13px", lg: "25px" }}
+          columnGap="15px"
           position="relative"
-          bottom={{ base: "0rem", lg: "5rem" }}
+          // bottom={{ base: "0rem", lg: "0rem" }}
           cursor="pointer"
-          top={{ base: "5rem", lg: "-5rem" }}
-          display={{ base: "block", lg: "flex" }}
+          top={{ base: "7rem", lg: "-7rem" }}
+          // display={{ base: "block", lg: "flex" }}
         >
           <Cards
             hText={"Access"}

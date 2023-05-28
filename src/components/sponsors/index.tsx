@@ -16,6 +16,7 @@ const Sponsors = () => {
         fontSize={{ base: "32px", lg: "45px" }}
         fontWeight="500"
         lineHeight={{ base: "40px", lg: "57px" }}
+        color='#1E3747'
       >
         Our Sponsors
       </Center>

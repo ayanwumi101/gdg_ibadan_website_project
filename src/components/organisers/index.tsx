@@ -151,7 +151,7 @@ const Organisers = () => {
           paddingTop={{ base: "60px", lg: "55px" }}
           paddingBottom={{ base: "29px", lg: "76px" }}
         >
-          <Buttons btnText="Know More" />
+          <Buttons btnText="Contact Us" />
         </Box>
       </Box>
     </>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Card, Heading } from "@chakra-ui/react";
+import { Box, Card, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Access from "../../assets/access.png";
 
@@ -8,8 +8,8 @@ export default function Cards({ hText, paragraph, background, color }) {
   return (
     <>
       <Card
-        width={{ base: "100%px", lg: "266px" }}
-        height={{ base: "316px", lg: "277px" }}
+        width={{ base: "100%px", md: '250px', lg: "250px" }}
+        height={{ base: '300px', lg: "277px" }}
         background={background}
         color="#fff"
         borderRadius="32px"
@@ -17,9 +17,7 @@ export default function Cards({ hText, paragraph, background, color }) {
         marginBottom={{ base: "31.34px" }}
       >
         <Box
-          pt={{ base: "43.93px", lg: "36.5px" }}
-          pl={{ base: "22px", lg: "20px" }}
-          pr={{ base: "22px", lg: "20px" }}
+        p='6'
         >
           <Image
             src={Access}
@@ -36,19 +34,18 @@ export default function Cards({ hText, paragraph, background, color }) {
             fontWeight="500"
             lineHeight="24px"
             pb="16px"
-            // fontFamily="'Recoleta', serif"
           >
             {hText}
           </Heading>
-          <Box
+          <Text
             as="p"
-            fontSize="16"
+            fontSize={{base: '19px', lg: '16px'}}
             fontWeight="400"
-            lineHeight="24px"
+            lineHeight="27px"
             fontFamily="'Google Sans Display', sans-serif"
           >
             {paragraph}
-          </Box>
+          </Text>
         </Box>
       </Card>
     </>

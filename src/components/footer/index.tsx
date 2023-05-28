@@ -33,7 +33,7 @@ const Footer = () => {
             mr={{ base: "18px", lg: "82px" }}
             position="absolute"
             borderRadius="24px"
-            bottom={{ base: "36.5rem", lg: "24rem" }}
+            bottom={{ base: "42.5rem", lg: "27rem" }}
             left="0"
             right="0"
           >
@@ -41,7 +41,7 @@ const Footer = () => {
               justifyContent="space-between"
               //   width="100%"
               //   mx="auto"
-              alignItems="center"
+              alignItems="flex-start"
               display={{ base: "block", lg: "flex" }}
             >
               <Box
@@ -215,12 +215,12 @@ const Footer = () => {
             pr={{ base: "0px", lg: "174px" }}
             // pb="119px"
           >
-            <Box>
+            <Box mt='8'>
               <Logo />
               <Text
-                fontSize="14px"
+                fontSize={15}
                 fontWeight="400"
-                lineHeight="20px"
+                lineHeight="28px"
                 pt={{ base: "27px", lg: "22px" }}
                 w={{ base: "252px", lg: "335px" }}
               >
@@ -239,7 +239,7 @@ const Footer = () => {
               </Flex>
             </Box>
 
-            <Box pt={{ base: "39px", lg: "0px" }}>
+            <Box pt={{ base: "39px", lg: "0px" }} mt='8'>
               <Text
                 fontSize="16px"
                 fontWeight="500"
@@ -274,7 +274,7 @@ const Footer = () => {
               </Box>
             </Box>
 
-            <Box pt={{ base: "15px", lg: "0px" }}>
+            <Box pt={{ base: "15px", lg: "0px" }} mt='8'>
               <Text
                 fontSize="16px"
                 fontWeight="500"
