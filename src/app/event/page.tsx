@@ -69,6 +69,7 @@ const Event = () => {
           fontSize="16px"
           lineHeight="24px"
           fontWeight="400"
+          pb={{ base: "16px", lg: "0px" }}
         >
           <Input placeholder="Date" />
           <Input placeholder="Keyword" />
