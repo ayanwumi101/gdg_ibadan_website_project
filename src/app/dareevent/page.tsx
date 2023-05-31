@@ -97,6 +97,7 @@ const DareEvent = () => {
         mr={{ base: "20px", lg: "134px" }}
       >
         <Heading
+          display={{ base: "block", lg: "none" }}
           as="h1"
           fontWeight="500"
           fontSize="57px"
@@ -119,29 +120,65 @@ const DareEvent = () => {
             >
               Ticket closing soon
             </Button>
-            <Box
-              w="345px"
-              borderRadius="4px"
-              mt="18px"
-              h="180px"
-              bg="#fff"
-              boxShadow="0px 15px 60px rgba(30, 55, 71, 0.1)"
-            >
-              <Box pt="35px" pb="34px" textAlign="center">
-                <Text
-                  pb="39px"
-                  fontWeight="400"
-                  fontSize="22px"
-                  lineHeight="28px"
-                >
-                  It’s free for everyone
-                </Text>
-                <Buttons btnText={"Register Now"} />
+            <Box mt="18px">
+              <Box
+                w="279px"
+                borderRadius="4px"
+                h="151px"
+                position="absolute"
+                right={{ base: "5rem", lg: "10.5rem" }}
+                z-index="20"
+                top={{ base: "71.5rem", lg: "53.7rem" }}
+                bg="#fff"
+                boxShadow="0px 15px 60px rgba(30, 55, 71, 0.1)"
+              ></Box>
+              <Box
+                w="312px"
+                borderRadius="4px"
+                h="163px"
+                position="absolute"
+                right={{ base: "4rem", lg: "9.4rem" }}
+                z-index="30"
+                top={{ base: "69.5rem", lg: "52rem" }}
+                bg="#fff"
+                boxShadow="0px 15px 60px rgba(30, 55, 71, 0.1)"
+              ></Box>
+              <Box
+                position="relative"
+                z-index="40"
+                w="345px"
+                borderRadius="4px"
+                h="180px"
+                bg="#fff"
+                boxShadow="0px 15px 60px rgba(30, 55, 71, 0.1)"
+              >
+                <Box pt="35px" pb="34px" textAlign="center">
+                  <Text
+                    pb="39px"
+                    fontWeight="400"
+                    fontSize="22px"
+                    lineHeight="28px"
+                  >
+                    It’s free for everyone
+                  </Text>
+                  <Buttons btnText={"Register Now"} />
+                </Box>
               </Box>
             </Box>
           </Box>
 
-          <Box pt={{ base: "60px", lg: "63px" }}>
+          <Box pt={{ base: "60px", lg: "0px" }}>
+            <Heading
+              display={{ base: "none", lg: "flex" }}
+              pb="60px"
+              as="h1"
+              fontWeight="500"
+              fontSize="57px"
+              lineHeight="64px"
+              color="#E05D2F"
+            >
+              Dare To Be
+            </Heading>
             <Heading as="h2" pb={{ base: "20px", lg: "20px" }}>
               Date and time
             </Heading>

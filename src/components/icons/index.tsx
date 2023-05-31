@@ -8,3 +8,6 @@ export * from "./love-icon";
 export * from "./whatsapp-icon";
 export * from "./facebook-icon";
 export * from "./danger-icon";
+export * from "./instagram-icon";
+export * from "./acebook-icon";
+export * from "./inkedin";
